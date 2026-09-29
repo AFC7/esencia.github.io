@@ -3,207 +3,199 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Perfil Profesional - Andrés Felipe Caro Muñoz</title>
-    <!-- Enlace a los estilos CSS -->
+    <title>ESENCIA | Tienda Oficial</title>
+    <!-- Enlace a Google Fonts para una tipografía elegante -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- Enlace a la hoja de estilos CSS -->
     <link rel="stylesheet" href="style.css">
-    <!-- Iconos de FontAwesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
-    <!-- ===== HEADER / NAVEGACIÓN ===== -->
-    <header class="header" id="header">
-        <nav class="nav container">
-            <a href="#" class="nav__logo"><span>Andrés</span>Caro</a>
-            <div class="nav__menu" id="nav-menu">
-                <ul class="nav__list">
-                    <li class="nav__item"><a href="#inicio" class="nav__link active-link">Inicio</a></li>
-                    <li class="nav__item"><a href="#sobre-mi" class="nav__link">Sobre Mí</a></li>
-                    <li class="nav__item"><a href="#habilidades" class="nav__link">Habilidades</a></li>
-                    <li class="nav__item"><a href="#contacto" class="nav__link">Contacto</a></li>
-                </ul>
-                <div class="nav__close" id="nav-close">
-                    <i class="fas fa-times"></i>
-                </div>
+    <!-- BARRA SUPERIOR -->
+    <div class="top-banner">
+        <span>👑 Envío gratis en compras superiores a $150.000 | Exclusividad y Estilo</span>
+    </div>
+
+    <!-- NAVEGACIÓN -->
+    <header class="header">
+        <div class="nav-container">
+            <a href="#" class="logo-box">
+                <svg class="crown-icon" viewBox="0 0 24 24" width="32" height="32" fill="#D4AF37">
+                    <path d="M5 16L3 5l5.5 5L12 4l3.5 6L21 5l-2 11H5m14 3a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1v-1h14v1Z"/>
+                </svg>
+                <span class="logo-text">ESENCIA</span>
+            </a>
+
+            <nav class="nav-menu" id="navMenu">
+                <a href="#inicio" class="nav-link active">Inicio</a>
+                <a href="#catalogo" class="nav-link">Catálogo</a>
+                <a href="#nosotros" class="nav-link">Nosotros</a>
+                <a href="#contacto" class="nav-link">Contacto</a>
+            </nav>
+
+            <div class="nav-actions">
+                <button class="cart-btn" id="cartBtn" aria-label="Carrito de compras">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+                    <span class="cart-count" id="cartCount">0</span>
+                </button>
+                <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
             </div>
-            <div class="nav__toggle" id="nav-toggle">
-                <i class="fas fa-bars"></i>
-            </div>
-        </nav>
+        </div>
     </header>
 
-    <!-- ===== CONTENIDO PRINCIPAL ===== -->
-    <main class="main">
-        
-        <!-- INICIO -->
-        <section class="inicio section" id="inicio">
-            <div class="inicio__container container grid">
-                <div class="inicio__data">
-                    <h1 class="inicio__title">Hola, soy <br><span>Andrés Felipe Caro</span></h1>
-                    <h3 class="inicio__subtitle">Ingeniero Electrónico & Desarrollador Web</h3>
-                    <p class="inicio__description">
-                        Apasionado por la tecnología, las redes y el desarrollo de soluciones digitales eficientes. Siempre en constante aprendizaje y listo para nuevos retos.
-                    </p>
-                    <div class="inicio__buttons">
-                        <a href="#contacto" class="button button--flex">
-                            Contáctame <i class="fas fa-paper-plane button__icon"></i>
-                        </a>
-                    </div>
-                </div>
-                <div class="inicio__img">
-                    <div class="inicio__blob">
-                        <i class="fas fa-laptop-code inicio__blob-icon"></i>
-                    </div>
-                </div>
-            </div>
-        </section>
+    <!-- SECCIÓN HERO / INICIO -->
+    <section id="inicio" class="hero">
+        <div class="hero-content">
+            <span class="hero-badge">NUEVA COLECCIÓN EXCLUSIVA</span>
+            <h1>Elegancia que Define tu Carácter</h1>
+            <p>Descubre nuestra selección de prendas y artículos diseñados con distinción para el hombre moderno.</p>
+            <a href="#catalogo" class="btn-primary">Explorar Catálogo</a>
+        </div>
+    </section>
 
-        <!-- SOBRE MÍ -->
-        <section class="sobre-mi section" id="sobre-mi">
-            <h2 class="section__title">Sobre Mí</h2>
-            <span class="section__subtitle">Mi introducción</span>
-
-            <div class="sobre-mi__container container grid">
-                <div class="sobre-mi__description">
-                    <p>
-                        Soy Ingeniero Electrónico egresado de la Universidad de Cundinamarca, con formación complementaria en redes, sistemas y desarrollo de software (bootcamp de programación y múltiples certificaciones técnicas). Me destaco por mi capacidad analítica, resolución de problemas y enfoque práctico en proyectos de ingeniería y TI.
-                    </p>
-                    <div class="sobre-mi__buttons">
-                        <a download href="#" class="button button--flex">
-                            Descargar CV <i class="fas fa-download button__icon"></i>
-                        </a>
-                    </div>
+    <!-- SECCIÓN DE CATEGORÍAS -->
+    <section class="categories-section">
+        <div class="container">
+            <h2 class="section-title">Explora por Categoría</h2>
+            <div class="categories-grid">
+                <div class="category-card" data-filter="all">
+                    <img src="images/all.jpg" alt="Todo" onerror="this.src='https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=600&q=80'">
+                    <div class="category-overlay"><h3>Todo</h3></div>
+                </div>
+                <div class="category-card" data-filter="camisetas">
+                    <img src="images/camisetas.jpg" alt="Camisetas" onerror="this.src='https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=600&q=80'">
+                    <div class="category-overlay"><h3>Camisetas</h3></div>
+                </div>
+                <div class="category-card" data-filter="esqueletos">
+                    <img src="images/esqueletos.jpg" alt="Esqueletos" onerror="this.src='https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=600&q=80'">
+                    <div class="category-overlay"><h3>Esqueletos</h3></div>
+                </div>
+                <div class="category-card" data-filter="gorras">
+                    <img src="images/gorras.jpg" alt="Gorras" onerror="this.src='https://images.unsplash.com/photo-1588850561407-ed78c282e89b?auto=format&fit=crop&w=600&q=80'">
+                    <div class="category-overlay"><h3>Gorras</h3></div>
+                </div>
+                <div class="category-card" data-filter="zapatos">
+                    <img src="images/zapatos.jpg" alt="Zapatos" onerror="this.src='https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=600&q=80'">
+                    <div class="category-overlay"><h3>Zapatos</h3></div>
+                </div>
+                <div class="category-card" data-filter="maquillaje">
+                    <img src="images/maquillaje.jpg" alt="Maquillaje" onerror="this.src='https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=600&q=80'">
+                    <div class="category-overlay"><h3>Maquillaje</h3></div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- HABILIDADES -->
-        <section class="habilidades section" id="habilidades">
-            <h2 class="section__title">Habilidades</h2>
-            <span class="section__subtitle">Mis conocimientos técnicos y profesionales</span>
-
-            <div class="habilidades__container container grid">
-                
-                <!-- Grupo 1: Ingeniería y Redes -->
-                <div class="habilidades__content">
-                    <h3 class="habilidades__title">
-                        <i class="fas fa-network-wired habilidades__title-icon"></i> Infraestructura y Redes
-                    </h3>
-                    <div class="habilidades__list">
-                        <div class="habilidades__data">
-                            <div class="habilidades__titles">
-                                <span class="habilidades__name">Redes y Enrutamiento (Cisco)</span>
-                                <span class="habilidades__number">85%</span>
-                            </div>
-                            <div class="habilidades__bar"><span class="habilidades__percentage habilidades__redes"></span></div>
-                        </div>
-
-                        <div class="habilidades__data">
-                            <div class="habilidades__titles">
-                                <span class="habilidades__name">Soporte TI y Hardware</span>
-                                <span class="habilidades__number">90%</span>
-                            </div>
-                            <div class="habilidades__bar"><span class="habilidades__percentage habilidades__soporte"></span></div>
-                        </div>
-                    </div>
+    <!-- SECCIÓN CATÁLOGO DE PRODUCTOS -->
+    <section id="catalogo" class="catalog-section">
+        <div class="container">
+            <div class="catalog-header">
+                <h2 class="section-title">Nuestra Colección</h2>
+                <div class="filter-buttons" id="filterButtons">
+                    <button class="filter-btn active" data-filter="all">Todos</button>
+                    <button class="filter-btn" data-filter="camisetas">Camisetas</button>
+                    <button class="filter-btn" data-filter="esqueletos">Esqueletos</button>
+                    <button class="filter-btn" data-filter="gorras">Gorras</button>
+                    <button class="filter-btn" data-filter="zapatos">Zapatos</button>
+                    <button class="filter-btn" data-filter="maquillaje">Maquillaje</button>
                 </div>
-
-                <!-- Grupo 2: Desarrollo -->
-                <div class="habilidades__content">
-                    <h3 class="habilidades__title">
-                        <i class="fas fa-code habilidades__title-icon"></i> Desarrollo y Software
-                    </h3>
-                    <div class="habilidades__list">
-                        <div class="habilidades__data">
-                            <div class="habilidades__titles">
-                                <span class="habilidades__name">HTML, CSS, JavaScript</span>
-                                <span class="habilidades__number">80%</span>
-                            </div>
-                            <div class="habilidades__bar"><span class="habilidades__percentage habilidades__web"></span></div>
-                        </div>
-
-                        <div class="habilidades__data">
-                            <div class="habilidades__titles">
-                                <span class="habilidades__name">Python / Flask & Bases de Datos</span>
-                                <span class="habilidades__number">75%</span>
-                            </div>
-                            <div class="habilidades__bar"><span class="habilidades__percentage habilidades__python"></span></div>
-                        </div>
-                    </div>
-                </div>
-
             </div>
-        </section>
 
-        <!-- CONTACTO -->
-        <section class="contacto section" id="contacto">
-            <h2 class="section__title">Contacto</h2>
-            <span class="section__subtitle">Ponte en contacto conmigo</span>
+            <!-- Grilla de Productos Dinámica -->
+            <div class="products-grid" id="productsGrid">
+                <!-- Los productos se inyectarán vía JavaScript -->
+            </div>
+        </div>
+    </section>
 
-            <div class="contacto__container container grid">
-                <div class="contacto__information">
-                    <div class="contacto__info">
-                        <i class="fas fa-phone contacto__icon"></i>
+    <!-- SECCIÓN NOSOTROS -->
+    <section id="nosotros" class="about-section">
+        <div class="container about-container">
+            <div class="about-text">
+                <span class="sub-heading">FILOSOSFÍA ESENCIA</span>
+                <h2>Diseñado para Quienes Marcan la Diferencia</h2>
+                <p>ESENCIA nace de la visión de fusionar la alta costura urbana con la comodidad esencial. Cada prenda es seleccionada rigurosamente para garantizar estándares superiores de calidad, durabilidad y presencia impecable.</p>
+                <div class="about-features">
+                    <div class="feature-item">
+                        <span class="feature-icon">👑</span>
                         <div>
-                            <h3 class="contacto__title">Teléfono</h3>
-                            <span class="contacto__subtitle">323 911 9905</span>
+                            <h4>Calidad Premium</h4>
+                            <p>Materiales de alta gama seleccionados minuciosamente.</p>
                         </div>
                     </div>
-
-                    <div class="contacto__info">
-                        <i class="fas fa-map-marker-alt contacto__icon"></i>
+                    <div class="feature-item">
+                        <span class="feature-icon">🛡️</span>
                         <div>
-                            <h3 class="contacto__title">Ubicación</h3>
-                            <span class="contacto__subtitle">Fusagasugá, Colombia</span>
+                            <h4>Compra Segura</h4>
+                            <p>Garantía total de satisfacción en cada pedido.</p>
                         </div>
                     </div>
                 </div>
-
-                <form action="" class="contacto__form grid">
-                    <div class="contacto__inputs grid">
-                        <div class="contacto__content">
-                            <label for="" class="contacto__label">Nombre</label>
-                            <input type="text" class="contacto__input" required>
-                        </div>
-                        <div class="contacto__content">
-                            <label for="" class="contacto__label">Correo</label>
-                            <input type="email" class="contacto__input" required>
-                        </div>
-                    </div>
-                    <div class="contacto__content">
-                        <label for="" class="contacto__label">Mensaje</label>
-                        <textarea name="" id="" cols="0" rows="7" class="contacto__input" required></textarea>
-                    </div>
-                    <div>
-                        <button type="submit" class="button button--flex">
-                            Enviar Mensaje <i class="fas fa-paper-plane button__icon"></i>
-                        </button>
-                    </div>
-                </form>
             </div>
-        </section>
+            <div class="about-image">
+                <img src="images/about.jpg" alt="Esencia Estilo" onerror="this.src='https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=800&q=80'">
+            </div>
+        </div>
+    </section>
 
-    </main>
-
-    <!-- ===== FOOTER ===== -->
-    <footer class="footer">
-        <div class="footer__bg">
-            <div class="footer__container container grid">
-                <div>
-                    <h1 class="footer__title">Andrés Caro</h1>
-                    <span class="footer__subtitle">Ingeniero Electrónico & Dev</span>
+    <!-- FOOTER / CONTACTO -->
+    <footer id="contacto" class="footer">
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <div class="footer-logo">
+                    <svg class="crown-icon" viewBox="0 0 24 24" width="28" height="28" fill="#D4AF37">
+                        <path d="M5 16L3 5l5.5 5L12 4l3.5 6L21 5l-2 11H5m14 3a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1v-1h14v1Z"/>
+                    </svg>
+                    <span>ESENCIA</span>
                 </div>
-                <ul class="footer__links">
-                    <li><a href="#sobre-mi" class="footer__link">Sobre Mí</a></li>
-                    <li><a href="#habilidades" class="footer__link">Habilidades</a></li>
-                    <li><a href="#contacto" class="footer__link">Contacto</a></li>
+                <p>Elevando el estándar del estilo personal y la elegancia contemporánea.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Enlaces Rápidos</h4>
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#catalogo">Catálogo</a></li>
+                    <li><a href="#nosotros">Nosotros</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
                 </ul>
             </div>
-            <p class="footer__copy">&#169; Andrés Felipe Caro Muñoz. Todos los derechos reservados.</p>
+            <div class="footer-col">
+                <h4>Contacto</h4>
+                <p>📍 Fusagasugá, Cundinamarca</p>
+                <p>📧 contacto@esenciastore.com</p>
+                <p>📞 +57 323 911 9905</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 ESENCIA. Todos los derechos reservados.</p>
         </div>
     </footer>
 
+    <!-- MODAL / CARRITO DE COMPRAS -->
+    <div class="cart-modal" id="cartModal">
+        <div class="cart-content">
+            <div class="cart-header">
+                <h3>Tu Carrito ESENCIA</h3>
+                <button class="close-cart" id="closeCart">&times;</button>
+            </div>
+            <div class="cart-items" id="cartItems">
+                <!-- Items del carrito -->
+            </div>
+            <div class="cart-footer">
+                <div class="cart-total">
+                    <span>Total:</span>
+                    <span id="cartTotalPrice">$0</span>
+                </div>
+                <button class="btn-primary checkout-btn" id="checkoutBtn">Finalizar Pedido</button>
+            </div>
+        </div>
+    </div>
+
     <!-- Enlace al archivo JavaScript -->
-    <script src="main.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
