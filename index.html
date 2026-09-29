@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil Profesional - Andrés Felipe Caro Muñoz</title>
+    <!-- Enlace a los estilos CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Iconos de FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- ===== HEADER / NAVEGACIÓN ===== -->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="#" class="nav__logo"><span>Andrés</span>Caro</a>
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="#inicio" class="nav__link active-link">Inicio</a></li>
+                    <li class="nav__item"><a href="#sobre-mi" class="nav__link">Sobre Mí</a></li>
+                    <li class="nav__item"><a href="#habilidades" class="nav__link">Habilidades</a></li>
+                    <li class="nav__item"><a href="#contacto" class="nav__link">Contacto</a></li>
+                </ul>
+                <div class="nav__close" id="nav-close">
+                    <i class="fas fa-times"></i>
+                </div>
+            </div>
+            <div class="nav__toggle" id="nav-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ===== CONTENIDO PRINCIPAL ===== -->
+    <main class="main">
+        
+        <!-- INICIO -->
+        <section class="inicio section" id="inicio">
+            <div class="inicio__container container grid">
+                <div class="inicio__data">
+                    <h1 class="inicio__title">Hola, soy <br><span>Andrés Felipe Caro</span></h1>
+                    <h3 class="inicio__subtitle">Ingeniero Electrónico & Desarrollador Web</h3>
+                    <p class="inicio__description">
+                        Apasionado por la tecnología, las redes y el desarrollo de soluciones digitales eficientes. Siempre en constante aprendizaje y listo para nuevos retos.
+                    </p>
+                    <div class="inicio__buttons">
+                        <a href="#contacto" class="button button--flex">
+                            Contáctame <i class="fas fa-paper-plane button__icon"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="inicio__img">
+                    <div class="inicio__blob">
+                        <i class="fas fa-laptop-code inicio__blob-icon"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SOBRE MÍ -->
+        <section class="sobre-mi section" id="sobre-mi">
+            <h2 class="section__title">Sobre Mí</h2>
+            <span class="section__subtitle">Mi introducción</span>
+
+            <div class="sobre-mi__container container grid">
+                <div class="sobre-mi__description">
+                    <p>
+                        Soy Ingeniero Electrónico egresado de la Universidad de Cundinamarca, con formación complementaria en redes, sistemas y desarrollo de software (bootcamp de programación y múltiples certificaciones técnicas). Me destaco por mi capacidad analítica, resolución de problemas y enfoque práctico en proyectos de ingeniería y TI.
+                    </p>
+                    <div class="sobre-mi__buttons">
+                        <a download href="#" class="button button--flex">
+                            Descargar CV <i class="fas fa-download button__icon"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- HABILIDADES -->
+        <section class="habilidades section" id="habilidades">
+            <h2 class="section__title">Habilidades</h2>
+            <span class="section__subtitle">Mis conocimientos técnicos y profesionales</span>
+
+            <div class="habilidades__container container grid">
+                
+                <!-- Grupo 1: Ingeniería y Redes -->
+                <div class="habilidades__content">
+                    <h3 class="habilidades__title">
+                        <i class="fas fa-network-wired habilidades__title-icon"></i> Infraestructura y Redes
+                    </h3>
+                    <div class="habilidades__list">
+                        <div class="habilidades__data">
+                            <div class="habilidades__titles">
+                                <span class="habilidades__name">Redes y Enrutamiento (Cisco)</span>
+                                <span class="habilidades__number">85%</span>
+                            </div>
+                            <div class="habilidades__bar"><span class="habilidades__percentage habilidades__redes"></span></div>
+                        </div>
+
+                        <div class="habilidades__data">
+                            <div class="habilidades__titles">
+                                <span class="habilidades__name">Soporte TI y Hardware</span>
+                                <span class="habilidades__number">90%</span>
+                            </div>
+                            <div class="habilidades__bar"><span class="habilidades__percentage habilidades__soporte"></span></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Grupo 2: Desarrollo -->
+                <div class="habilidades__content">
+                    <h3 class="habilidades__title">
+                        <i class="fas fa-code habilidades__title-icon"></i> Desarrollo y Software
+                    </h3>
+                    <div class="habilidades__list">
+                        <div class="habilidades__data">
+                            <div class="habilidades__titles">
+                                <span class="habilidades__name">HTML, CSS, JavaScript</span>
+                                <span class="habilidades__number">80%</span>
+                            </div>
+                            <div class="habilidades__bar"><span class="habilidades__percentage habilidades__web"></span></div>
+                        </div>
+
+                        <div class="habilidades__data">
+                            <div class="habilidades__titles">
+                                <span class="habilidades__name">Python / Flask & Bases de Datos</span>
+                                <span class="habilidades__number">75%</span>
+                            </div>
+                            <div class="habilidades__bar"><span class="habilidades__percentage habilidades__python"></span></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- CONTACTO -->
+        <section class="contacto section" id="contacto">
+            <h2 class="section__title">Contacto</h2>
+            <span class="section__subtitle">Ponte en contacto conmigo</span>
+
+            <div class="contacto__container container grid">
+                <div class="contacto__information">
+                    <div class="contacto__info">
+                        <i class="fas fa-phone contacto__icon"></i>
+                        <div>
+                            <h3 class="contacto__title">Teléfono</h3>
+                            <span class="contacto__subtitle">323 911 9905</span>
+                        </div>
+                    </div>
+
+                    <div class="contacto__info">
+                        <i class="fas fa-map-marker-alt contacto__icon"></i>
+                        <div>
+                            <h3 class="contacto__title">Ubicación</h3>
+                            <span class="contacto__subtitle">Fusagasugá, Colombia</span>
+                        </div>
+                    </div>
+                </div>
+
+                <form action="" class="contacto__form grid">
+                    <div class="contacto__inputs grid">
+                        <div class="contacto__content">
+                            <label for="" class="contacto__label">Nombre</label>
+                            <input type="text" class="contacto__input" required>
+                        </div>
+                        <div class="contacto__content">
+                            <label for="" class="contacto__label">Correo</label>
+                            <input type="email" class="contacto__input" required>
+                        </div>
+                    </div>
+                    <div class="contacto__content">
+                        <label for="" class="contacto__label">Mensaje</label>
+                        <textarea name="" id="" cols="0" rows="7" class="contacto__input" required></textarea>
+                    </div>
+                    <div>
+                        <button type="submit" class="button button--flex">
+                            Enviar Mensaje <i class="fas fa-paper-plane button__icon"></i>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <div class="footer__bg">
+            <div class="footer__container container grid">
+                <div>
+                    <h1 class="footer__title">Andrés Caro</h1>
+                    <span class="footer__subtitle">Ingeniero Electrónico & Dev</span>
+                </div>
+                <ul class="footer__links">
+                    <li><a href="#sobre-mi" class="footer__link">Sobre Mí</a></li>
+                    <li><a href="#habilidades" class="footer__link">Habilidades</a></li>
+                    <li><a href="#contacto" class="footer__link">Contacto</a></li>
+                </ul>
+            </div>
+            <p class="footer__copy">&#169; Andrés Felipe Caro Muñoz. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Enlace al archivo JavaScript -->
+    <script src="main.js"></script>
+</body>
+</html>
