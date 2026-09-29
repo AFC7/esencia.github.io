@@ -4,16 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ESENCIA | Tienda Oficial</title>
+    <!-- Tipografía Elegante -->
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Plus+Jakarta+Sans:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body data-category="inicio">
 
+    <!-- BARRA SUPERIOR -->
     <div class="top-banner">
         <span>👑 Envío gratis en compras superiores a $150.000 | Exclusividad y Estilo</span>
     </div>
 
-    <!-- HEADER / NAVEGACIÓN -->
+    <!-- HEADER / BARRA DE NAVEGACIÓN -->
     <header class="header">
         <div class="nav-container">
             <a href="index.html" class="logo-box">
@@ -33,30 +35,35 @@
             </nav>
 
             <div class="nav-actions">
-                <button class="cart-btn" id="cartBtn">
-                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+                <button class="cart-btn" id="cartBtn" aria-label="Abrir carrito">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
+                        <line x1="3" y1="6" x2="21" y2="6"/>
+                        <path d="M16 10a4 4 0 0 1-8 0"/>
+                    </svg>
                     <span class="cart-count" id="cartCount">0</span>
                 </button>
-                <button class="menu-toggle" id="menuToggle">
+                <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
                     <span></span><span></span><span></span>
                 </button>
             </div>
         </div>
     </header>
 
-    <!-- HERO -->
+    <!-- SECCIÓN HERO (PORTADA) -->
     <section class="hero">
         <div class="hero-content">
-            <span class="hero-badge">NUEVA COLECCIÓN</span>
+            <span class="hero-badge">NUEVA COLECCIÓN EXCLUSIVA</span>
             <h1>Elegancia que Define tu Carácter</h1>
-            <p>Selecciona la categoría que deseas explorar para ingresar a su catálogo independiente.</p>
+            <p>Descubre colecciones seleccionadas con distinción. Selecciona una categoría para explorar su catálogo independiente.</p>
+            <a href="#catalogos" class="btn-primary" style="display: inline-block; width: auto; margin-top: 15px; padding: 12px 30px;">Explorar Catálogos</a>
         </div>
     </section>
 
     <!-- HUB DE CATÁLOGOS INDEPENDIENTES -->
-    <section class="categories-section">
+    <section id="catalogos" class="categories-section">
         <div class="container">
-            <h2 class="section-title">Catálogos Disponibles</h2>
+            <h2 class="section-title">Nuestros Catálogos</h2>
             <div class="categories-grid">
                 <a href="camisetas.html" class="category-card">
                     <img src="images/camisetas-main.jpg" alt="Camisetas" onerror="this.src='https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=600&q=80'">
@@ -82,13 +89,55 @@
         </div>
     </section>
 
-    <!-- FOOTER Y MODAL DEL CARRITO -->
+    <!-- SECCIÓN NOSOTROS -->
+    <section class="about-section" style="padding: 60px 0; background-color: #0e0e0e; border-top: 1px solid var(--bg-dark); border-bottom: 1px solid var(--bg-dark);">
+        <div class="container" style="display: flex; flex-wrap: wrap; gap: 40px; align-items: center;">
+            <div style="flex: 1; min-width: 300px;">
+                <span style="color: var(--gold); font-size: 0.85rem; letter-spacing: 2px;">FILOSOFÍA ESENCIA</span>
+                <h2 style="font-size: 2rem; margin: 10px 0 20px;">Diseñado para Quienes Marcan la Diferencia</h2>
+                <p style="color: var(--gray-light); margin-bottom: 20px;">ESENCIA nace de la visión de fusionar la alta costura urbana con la comodidad esencial. Cada prenda y producto es seleccionado rigurosamente para garantizar estándares superiores de calidad, durabilidad y presencia impecable.</p>
+            </div>
+            <div style="flex: 1; min-width: 300px; height: 300px; border-radius: 8px; overflow: hidden;">
+                <img src="images/about.jpg" alt="Filosofía Esencia" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.src='https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=800&q=80'">
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER / CONTACTO -->
     <footer class="footer">
+        <div class="container" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 30px; text-align: left; padding-bottom: 30px;">
+            <div>
+                <div class="logo-box" style="margin-bottom: 15px;">
+                    <svg class="crown-icon" viewBox="0 0 24 24" width="24" height="24" fill="#D4AF37">
+                        <path d="M5 16L3 5l5.5 5L12 4l3.5 6L21 5l-2 11H5m14 3a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1v-1h14v1Z"/>
+                    </svg>
+                    <span class="logo-text" style="font-size: 1.2rem;">ESENCIA</span>
+                </div>
+                <p style="color: var(--gray-light); font-size: 0.9rem;">Elevando el estándar del estilo personal y la elegancia contemporánea.</p>
+            </div>
+            <div>
+                <h4 style="color: var(--gold); margin-bottom: 15px;">Enlaces Rápidos</h4>
+                <ul style="list-style: none; display: flex; flex-direction: column; gap: 8px;">
+                    <li><a href="camisetas.html" style="color: var(--gray-light); font-size: 0.9rem;">Camisetas</a></li>
+                    <li><a href="esqueletos.html" style="color: var(--gray-light); font-size: 0.9rem;">Esqueletos</a></li>
+                    <li><a href="zapatos.html" style="color: var(--gray-light); font-size: 0.9rem;">Zapatos</a></li>
+                    <li><a href="gorras.html" style="color: var(--gray-light); font-size: 0.9rem;">Gorras</a></li>
+                    <li><a href="maquillaje.html" style="color: var(--gray-light); font-size: 0.9rem;">Maquillaje</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 style="color: var(--gold); margin-bottom: 15px;">Contacto</h4>
+                <p style="color: var(--gray-light); font-size: 0.9rem; margin-bottom: 6px;">📍 Fusagasugá, Cundinamarca</p>
+                <p style="color: var(--gray-light); font-size: 0.9rem; margin-bottom: 6px;">📧 contacto@esenciastore.com</p>
+                <p style="color: var(--gray-light); font-size: 0.9rem;">📞 +57 323 911 9905</p>
+            </div>
+        </div>
         <div class="container footer-bottom">
             <p>&copy; 2026 ESENCIA. Todos los derechos reservados.</p>
         </div>
     </footer>
 
+    <!-- MODAL DEL CARRITO DE COMPRAS -->
     <div class="cart-modal" id="cartModal">
         <div class="cart-content">
             <div class="cart-header">
@@ -97,12 +146,16 @@
             </div>
             <div class="cart-items" id="cartItems"></div>
             <div class="cart-footer">
-                <div class="cart-total"><span>Total:</span><span id="cartTotalPrice">$0</span></div>
+                <div class="cart-total">
+                    <span>Total:</span>
+                    <span id="cartTotalPrice">$0</span>
+                </div>
                 <button class="btn-primary checkout-btn" id="checkoutBtn">Finalizar Pedido</button>
             </div>
         </div>
     </div>
 
+    <!-- ARCHIVO JAVASCRIPT REUTILIZABLE -->
     <script src="script.js"></script>
 </body>
-</html> 
+</html>
