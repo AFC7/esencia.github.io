@@ -4,22 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ESENCIA | Tienda Oficial</title>
-    <!-- Enlace a Google Fonts para una tipografía elegante -->
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <!-- Enlace a la hoja de estilos CSS -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Plus+Jakarta+Sans:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- BARRA SUPERIOR -->
     <div class="top-banner">
         <span>👑 Envío gratis en compras superiores a $150.000 | Exclusividad y Estilo</span>
     </div>
 
-    <!-- NAVEGACIÓN -->
+    <!-- HEADER / NAVEGACIÓN -->
     <header class="header">
         <div class="nav-container">
-            <a href="#" class="logo-box">
+            <a href="index.html" class="logo-box">
                 <svg class="crown-icon" viewBox="0 0 24 24" width="32" height="32" fill="#D4AF37">
                     <path d="M5 16L3 5l5.5 5L12 4l3.5 6L21 5l-2 11H5m14 3a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1v-1h14v1Z"/>
                 </svg>
@@ -27,175 +24,85 @@
             </a>
 
             <nav class="nav-menu" id="navMenu">
-                <a href="#inicio" class="nav-link active">Inicio</a>
-                <a href="#catalogo" class="nav-link">Catálogo</a>
-                <a href="#nosotros" class="nav-link">Nosotros</a>
-                <a href="#contacto" class="nav-link">Contacto</a>
+                <a href="index.html" class="nav-link active">Inicio</a>
+                <a href="camisetas.html" class="nav-link">Camisetas</a>
+                <a href="esqueletos.html" class="nav-link">Esqueletos</a>
+                <a href="zapatos.html" class="nav-link">Zapatos</a>
+                <a href="gorras.html" class="nav-link">Gorras</a>
+                <a href="maquillaje.html" class="nav-link">Maquillaje</a>
             </nav>
 
             <div class="nav-actions">
-                <button class="cart-btn" id="cartBtn" aria-label="Carrito de compras">
+                <button class="cart-btn" id="cartBtn">
                     <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
                     <span class="cart-count" id="cartCount">0</span>
                 </button>
-                <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
-                    <span></span>
-                    <span></span>
-                    <span></span>
+                <button class="menu-toggle" id="menuToggle">
+                    <span></span><span></span><span></span>
                 </button>
             </div>
         </div>
     </header>
 
-    <!-- SECCIÓN HERO / INICIO -->
-    <section id="inicio" class="hero">
+    <!-- HERO -->
+    <section class="hero">
         <div class="hero-content">
-            <span class="hero-badge">NUEVA COLECCIÓN EXCLUSIVA</span>
+            <span class="hero-badge">NUEVA COLECCIÓN</span>
             <h1>Elegancia que Define tu Carácter</h1>
-            <p>Descubre nuestra selección de prendas y artículos diseñados con distinción para el hombre moderno.</p>
-            <a href="#catalogo" class="btn-primary">Explorar Catálogo</a>
+            <p>Selecciona la categoría que deseas explorar para ingresar a su catálogo independiente.</p>
         </div>
     </section>
 
-    <!-- SECCIÓN DE CATEGORÍAS -->
+    <!-- HUB DE CATÁLOGOS INDEPENDIENTES -->
     <section class="categories-section">
         <div class="container">
-            <h2 class="section-title">Explora por Categoría</h2>
+            <h2 class="section-title">Catálogos Disponibles</h2>
             <div class="categories-grid">
-                <div class="category-card" data-filter="all">
-                    <img src="images/all.jpg" alt="Todo" onerror="this.src='https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=600&q=80'">
-                    <div class="category-overlay"><h3>Todo</h3></div>
-                </div>
-                <div class="category-card" data-filter="camisetas">
-                    <img src="images/camisetas.jpg" alt="Camisetas" onerror="this.src='https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=600&q=80'">
-                    <div class="category-overlay"><h3>Camisetas</h3></div>
-                </div>
-                <div class="category-card" data-filter="esqueletos">
-                    <img src="images/esqueletos.jpg" alt="Esqueletos" onerror="this.src='https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=600&q=80'">
-                    <div class="category-overlay"><h3>Esqueletos</h3></div>
-                </div>
-                <div class="category-card" data-filter="gorras">
-                    <img src="images/gorras.jpg" alt="Gorras" onerror="this.src='https://images.unsplash.com/photo-1588850561407-ed78c282e89b?auto=format&fit=crop&w=600&q=80'">
-                    <div class="category-overlay"><h3>Gorras</h3></div>
-                </div>
-                <div class="category-card" data-filter="zapatos">
-                    <img src="images/zapatos.jpg" alt="Zapatos" onerror="this.src='https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=600&q=80'">
-                    <div class="category-overlay"><h3>Zapatos</h3></div>
-                </div>
-                <div class="category-card" data-filter="maquillaje">
-                    <img src="images/maquillaje.jpg" alt="Maquillaje" onerror="this.src='https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=600&q=80'">
-                    <div class="category-overlay"><h3>Maquillaje</h3></div>
-                </div>
+                <a href="camisetas.html" class="category-card">
+                    <img src="images/camisetas-main.jpg" alt="Camisetas" onerror="this.src='https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=600&q=80'">
+                    <div class="category-overlay"><h3>Catálogo Camisetas</h3></div>
+                </a>
+                <a href="esqueletos.html" class="category-card">
+                    <img src="images/esqueletos-main.jpg" alt="Esqueletos" onerror="this.src='https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=600&q=80'">
+                    <div class="category-overlay"><h3>Catálogo Esqueletos</h3></div>
+                </a>
+                <a href="zapatos.html" class="category-card">
+                    <img src="images/zapatos-main.jpg" alt="Zapatos" onerror="this.src='https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=600&q=80'">
+                    <div class="category-overlay"><h3>Catálogo Zapatos</h3></div>
+                </a>
+                <a href="gorras.html" class="category-card">
+                    <img src="images/gorras-main.jpg" alt="Gorras" onerror="this.src='https://images.unsplash.com/photo-1588850561407-ed78c282e89b?auto=format&fit=crop&w=600&q=80'">
+                    <div class="category-overlay"><h3>Catálogo Gorras</h3></div>
+                </a>
+                <a href="maquillaje.html" class="category-card">
+                    <img src="images/maquillaje-main.jpg" alt="Maquillaje" onerror="this.src='https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=600&q=80'">
+                    <div class="category-overlay"><h3>Catálogo Maquillaje</h3></div>
+                </a>
             </div>
         </div>
     </section>
 
-    <!-- SECCIÓN CATÁLOGO DE PRODUCTOS -->
-    <section id="catalogo" class="catalog-section">
-        <div class="container">
-            <div class="catalog-header">
-                <h2 class="section-title">Nuestra Colección</h2>
-                <div class="filter-buttons" id="filterButtons">
-                    <button class="filter-btn active" data-filter="all">Todos</button>
-                    <button class="filter-btn" data-filter="camisetas">Camisetas</button>
-                    <button class="filter-btn" data-filter="esqueletos">Esqueletos</button>
-                    <button class="filter-btn" data-filter="gorras">Gorras</button>
-                    <button class="filter-btn" data-filter="zapatos">Zapatos</button>
-                    <button class="filter-btn" data-filter="maquillaje">Maquillaje</button>
-                </div>
-            </div>
-
-            <!-- Grilla de Productos Dinámica -->
-            <div class="products-grid" id="productsGrid">
-                <!-- Los productos se inyectarán vía JavaScript -->
-            </div>
-        </div>
-    </section>
-
-    <!-- SECCIÓN NOSOTROS -->
-    <section id="nosotros" class="about-section">
-        <div class="container about-container">
-            <div class="about-text">
-                <span class="sub-heading">FILOSOSFÍA ESENCIA</span>
-                <h2>Diseñado para Quienes Marcan la Diferencia</h2>
-                <p>ESENCIA nace de la visión de fusionar la alta costura urbana con la comodidad esencial. Cada prenda es seleccionada rigurosamente para garantizar estándares superiores de calidad, durabilidad y presencia impecable.</p>
-                <div class="about-features">
-                    <div class="feature-item">
-                        <span class="feature-icon">👑</span>
-                        <div>
-                            <h4>Calidad Premium</h4>
-                            <p>Materiales de alta gama seleccionados minuciosamente.</p>
-                        </div>
-                    </div>
-                    <div class="feature-item">
-                        <span class="feature-icon">🛡️</span>
-                        <div>
-                            <h4>Compra Segura</h4>
-                            <p>Garantía total de satisfacción en cada pedido.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="about-image">
-                <img src="images/about.jpg" alt="Esencia Estilo" onerror="this.src='https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=800&q=80'">
-            </div>
-        </div>
-    </section>
-
-    <!-- FOOTER / CONTACTO -->
-    <footer id="contacto" class="footer">
-        <div class="container footer-grid">
-            <div class="footer-col">
-                <div class="footer-logo">
-                    <svg class="crown-icon" viewBox="0 0 24 24" width="28" height="28" fill="#D4AF37">
-                        <path d="M5 16L3 5l5.5 5L12 4l3.5 6L21 5l-2 11H5m14 3a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1v-1h14v1Z"/>
-                    </svg>
-                    <span>ESENCIA</span>
-                </div>
-                <p>Elevando el estándar del estilo personal y la elegancia contemporánea.</p>
-            </div>
-            <div class="footer-col">
-                <h4>Enlaces Rápidos</h4>
-                <ul>
-                    <li><a href="#inicio">Inicio</a></li>
-                    <li><a href="#catalogo">Catálogo</a></li>
-                    <li><a href="#nosotros">Nosotros</a></li>
-                    <li><a href="#contacto">Contacto</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h4>Contacto</h4>
-                <p>📍 Fusagasugá, Cundinamarca</p>
-                <p>📧 contacto@esenciastore.com</p>
-                <p>📞 +57 323 911 9905</p>
-            </div>
-        </div>
-        <div class="footer-bottom">
+    <!-- FOOTER Y MODAL DEL CARRITO -->
+    <footer class="footer">
+        <div class="container footer-bottom">
             <p>&copy; 2026 ESENCIA. Todos los derechos reservados.</p>
         </div>
     </footer>
 
-    <!-- MODAL / CARRITO DE COMPRAS -->
     <div class="cart-modal" id="cartModal">
         <div class="cart-content">
             <div class="cart-header">
                 <h3>Tu Carrito ESENCIA</h3>
                 <button class="close-cart" id="closeCart">&times;</button>
             </div>
-            <div class="cart-items" id="cartItems">
-                <!-- Items del carrito -->
-            </div>
+            <div class="cart-items" id="cartItems"></div>
             <div class="cart-footer">
-                <div class="cart-total">
-                    <span>Total:</span>
-                    <span id="cartTotalPrice">$0</span>
-                </div>
+                <div class="cart-total"><span>Total:</span><span id="cartTotalPrice">$0</span></div>
                 <button class="btn-primary checkout-btn" id="checkoutBtn">Finalizar Pedido</button>
             </div>
         </div>
     </div>
 
-    <!-- Enlace al archivo JavaScript -->
     <script src="script.js"></script>
 </body>
-</html>
+</html> 

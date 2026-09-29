@@ -1,195 +1,151 @@
-// Base de datos de productos para ESENCIA (Hombre y Maquillaje, sin sección de mujer)
-const products = [
-    {
-        id: 1,
-        title: "Camiseta Classic Gold",
-        category: "camisetas",
-        price: 65000,
-        image: "images/camiseta-1.jpg",
-        fallback: "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=600&q=80",
-        badge: "Nuevo"
-    },
-    {
-        id: 2,
-        title: "Esqueleto Urban Black",
-        category: "esqueletos",
-        price: 55000,
-        image: "images/esqueleto-1.jpg",
-        fallback: "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=600&q=80",
-        badge: "Popular"
-    },
-    {
-        id: 3,
-        title: "Gorra Snapback Crown",
-        category: "gorras",
-        price: 70000,
-        image: "images/gorra-1.jpg",
-        fallback: "https://images.unsplash.com/photo-1588850561407-ed78c282e89b?auto=format&fit=crop&w=600&q=80",
-        badge: "Exclusivo"
-    },
-    {
-        id: 4,
-        title: "Zapatos Oxford Leather",
-        category: "zapatos",
-        price: 180000,
-        image: "images/zapatos-1.jpg",
-        fallback: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=600&q=80",
-        badge: "Tendencia"
-    },
-    {
-        id: 5,
-        title: "Kit Maquillaje Professional Pro",
-        category: "maquillaje",
-        price: 120000,
-        image: "images/maquillaje-1.jpg",
-        fallback: "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=600&q=80",
-        badge: "Destacado"
-    },
-    {
-        id: 6,
-        title: "Camiseta Oversize Minimal",
-        category: "camisetas",
-        price: 75000,
-        image: "images/camiseta-2.jpg",
-        fallback: "https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?auto=format&fit=crop&w=600&q=80",
-        badge: "Nuevo"
-    },
-    {
-        id: 7,
-        title: "Esqueleto Sport Flex",
-        category: "esqueletos",
-        price: 50000,
-        image: "images/esqueleto-2.jpg",
-        fallback: "https://images.unsplash.com/photo-1576566588028-4147f3842f27?auto=format&fit=crop&w=600&q=80",
-        badge: ""
-    },
-    {
-        id: 8,
-        title: "Zapatos Casual Runner Gold",
-        category: "zapatos",
-        price: 150000,
-        image: "images/zapatos-2.jpg",
-        fallback: "https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?auto=format&fit=crop&w=600&q=80",
-        badge: "Oferta"
-    }
-];
-
-// Estado del carrito
-let cart = [];
-
-// Elementos del DOM
-const productsGrid = document.getElementById('productsGrid');
-const filterButtons = document.querySelectorAll('.filter-btn, .category-card');
-const cartBtn = document.getElementById('cartBtn');
-const closeCart = document.getElementById('closeCart');
-const cartModal = document.getElementById('cartModal');
-const cartItemsContainer = document.getElementById('cartItems');
-const cartCount = document.getElementById('cartCount');
-const cartTotalPrice = document.getElementById('cartTotalPrice');
-const checkoutBtn = document.getElementById('checkoutBtn');
-const menuToggle = document.getElementById('menuToggle');
-const navMenu = document.getElementById('navMenu');
-
-// Formateador de moneda en pesos colombianos
-const formatCOP = (value) => {
-    return new Intl.NumberFormat('es-CO', { style: 'currency', currency: 'COP', minimumFractionDigits: 0 }).format(value);
+// BASE DE DATOS DE PRODUCTOS (4 Ejemplos Específicos por cada Catálogo)
+const productsData = {
+    camisetas: [
+        { id: 101, title: "Camiseta Oversize Black Gold", subcategory: "Oversize", price: 75000, image: "images/camisetas-1.jpg", fallback: "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=600&q=80" },
+        { id: 102, title: "Camiseta Slim Fit Essential", subcategory: "Slim Fit", price: 65000, image: "images/camisetas-2.jpg", fallback: "https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?auto=format&fit=crop&w=600&q=80" },
+        { id: 103, title: "Camiseta Polo Luxury Crown", subcategory: "Polo", price: 90000, image: "images/camisetas-3.jpg", fallback: "https://images.unsplash.com/photo-1625910513413-3fc8e030e461?auto=format&fit=crop&w=600&q=80" },
+        { id: 104, title: "Camiseta Graphic Urban", subcategory: "Estampada", price: 70000, image: "images/camisetas-4.jpg", fallback: "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=600&q=80" }
+    ],
+    esqueletos: [
+        { id: 201, title: "Esqueleto Gym Performance", subcategory: "Deportivo", price: 55000, image: "images/esqueletos-1.jpg", fallback: "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=600&q=80" },
+        { id: 202, title: "Esqueleto Urban Cut Deep", subcategory: "Urbano", price: 50000, image: "images/esqueletos-2.jpg", fallback: "https://images.unsplash.com/photo-1576566588028-4147f3842f27?auto=format&fit=crop&w=600&q=80" },
+        { id: 203, title: "Esqueleto Seamless Fit", subcategory: "Ajustado", price: 58000, image: "images/esqueletos-3.jpg", fallback: "https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=600&q=80" },
+        { id: 204, title: "Esqueleto Ribbed Cotton", subcategory: "Clásico", price: 48000, image: "images/esqueletos-4.jpg", fallback: "https://images.unsplash.com/photo-1503341455253-b2e723bb3dbb?auto=format&fit=crop&w=600&q=80" }
+    ],
+    zapatos: [
+        { id: 301, title: "Zapatos Oxford Classic Leather", subcategory: "Formal", price: 180000, image: "images/zapatos-1.jpg", fallback: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=600&q=80" },
+        { id: 302, title: "Sneakers Gold Runner", subcategory: "Urbano", price: 160000, image: "images/zapatos-2.jpg", fallback: "https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?auto=format&fit=crop&w=600&q=80" },
+        { id: 303, title: "Mocasines Suede Velvet", subcategory: "Casual", price: 175000, image: "images/zapatos-3.jpg", fallback: "https://images.unsplash.com/photo-1533867617858-e7b97e060509?auto=format&fit=crop&w=600&q=80" },
+        { id: 304, title: "Botas Chelsea Dark", subcategory: "Botas", price: 210000, image: "images/zapatos-4.jpg", fallback: "https://images.unsplash.com/photo-1608256246200-53e635b5b65f?auto=format&fit=crop&w=600&q=80" }
+    ],
+    gorras: [
+        { id: 401, title: "Gorra Snapback Crown Gold", subcategory: "Snapback", price: 70000, image: "images/gorras-1.jpg", fallback: "https://images.unsplash.com/photo-1588850561407-ed78c282e89b?auto=format&fit=crop&w=600&q=80" },
+        { id: 402, title: "Gorra Trucker Mesh Black", subcategory: "Trucker", price: 65000, image: "images/gorras-2.jpg", fallback: "https://images.unsplash.com/photo-1575428652377-a2d80e2277fc?auto=format&fit=crop&w=600&q=80" },
+        { id: 403, title: "Gorra Curved Strapback", subcategory: "Curva", price: 68000, image: "images/gorras-3.jpg", fallback: "https://images.unsplash.com/photo-1521369909029-2afed882baee?auto=format&fit=crop&w=600&q=80" },
+        { id: 404, title: "Gorra Beanie Winter Gold", subcategory: "Beanie", price: 55000, image: "images/gorras-4.jpg", fallback: "https://images.unsplash.com/photo-1576871337632-b9aef4c17ab9?auto=format&fit=crop&w=600&q=80" }
+    ],
+    maquillaje: [
+        { id: 501, title: "Base Matte Full Longwear", subcategory: "Rostro", price: 95000, image: "images/maquillaje-1.jpg", fallback: "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=600&q=80" },
+        { id: 502, title: "Paleta Sombras Gold Edition", subcategory: "Ojos", price: 120000, image: "images/maquillaje-2.jpg", fallback: "https://images.unsplash.com/photo-1512496015851-a90fb38ba796?auto=format&fit=crop&w=600&q=80" },
+        { id: 503, title: "Labial Velvet Matte Black Box", subcategory: "Labios", price: 50000, image: "images/maquillaje-3.jpg", fallback: "https://images.unsplash.com/photo-1586495777744-4413f21062fa?auto=format&fit=crop&w=600&q=80" },
+        { id: 504, title: "Primer Illuminating Glow", subcategory: "Cuidado", price: 85000, image: "images/maquillaje-4.jpg", fallback: "https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=600&q=80" }
+    ]
 };
 
-// Renderizar Productos en el Catálogo
-function renderProducts(filter = 'all') {
-    productsGrid.innerHTML = '';
-    
-    const filteredProducts = filter === 'all' 
-        ? products 
-        : products.filter(product => product.category === filter);
+// CARRITO GLOBAL
+let cart = JSON.parse(localStorage.getItem('esencia_cart')) || [];
 
-    if (filteredProducts.length === 0) {
-        productsGrid.innerHTML = `<p style="grid-column: 1/-1; text-align: center; color: var(--gray-light); padding: 40px;">No hay productos disponibles en esta categoría actualmente.</p>`;
-        return;
+// FORMATO PESOS COLOMBIANOS
+const formatCOP = (val) => new Intl.NumberFormat('es-CO', { style: 'currency', currency: 'COP', minimumFractionDigits: 0 }).format(val);
+
+// INICIALIZACIÓN DE LA PÁGINA
+document.addEventListener('DOMContentLoaded', () => {
+    updateCartUI();
+    setupCartEvents();
+    setupMobileMenu();
+
+    const category = document.body.getAttribute('data-category');
+    if (category && productsData[category]) {
+        initCatalogPage(category);
     }
-
-    filteredProducts.forEach(product => {
-        const productCard = document.createElement('div');
-        productCard.className = 'product-card';
-        productCard.innerHTML = `
-            <div class="product-image">
-                ${product.badge ? `<span class="product-badge">${product.badge}</span>` : ''}
-                <img src="${product.image}" alt="${product.title}" onerror="this.src='${product.fallback}'">
-            </div>
-            <div class="product-info">
-                <span class="product-category">${product.category}</span>
-                <h3 class="product-title">${product.title}</h3>
-                <div class="product-price">${formatCOP(product.price)}</div>
-                <button class="add-to-cart" onclick="addToCart(${product.id})">Añadir al Carrito</button>
-            </div>
-        `;
-        productsGrid.appendChild(productCard);
-    });
-}
-
-// Filtrar por categorías
-filterButtons.forEach(btn => {
-    btn.addEventListener('click', () => {
-        const filter = btn.getAttribute('data-filter');
-        
-        // Actualizar botones activos de la barra de filtros
-        document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-        const matchingBtn = document.querySelector(`.filter-btn[data-filter="${filter}"]`);
-        if (matchingBtn) matchingBtn.classList.add('active');
-
-        renderProducts(filter);
-
-        // Si se hace clic desde las tarjetas de categoría superiores, desplazar suavemente al catálogo
-        if(btn.classList.contains('category-card')) {
-            document.getElementById('catalogo').scrollIntoView({ behavior: 'smooth' });
-        }
-    });
 });
 
-// Agregar producto al carrito
-window.addToCart = function(productId) {
-    const product = products.find(p => p.id === productId);
-    const existingItem = cart.find(item => item.id === productId);
+// INICIALIZAR PÁGINA DE CATÁLOGO INDEPENDIENTE
+function initCatalogPage(category) {
+    const products = productsData[category];
+    const subfilterContainer = document.getElementById('subfilterContainer');
+    const productsGrid = document.getElementById('productsGrid');
 
-    if (existingItem) {
-        existingItem.quantity += 1;
+    // Extraer subcategorías únicas para crear subfiltros
+    const subcategories = [...new Set(products.map(p => p.subcategory))];
+
+    // Renderizar botones de subfiltro
+    subfilterContainer.innerHTML = '';
+    subcategories.forEach((sub, idx) => {
+        const btn = document.createElement('button');
+        btn.className = `subfilter-btn ${idx === 0 ? 'active' : ''}`;
+        btn.textContent = sub;
+        btn.addEventListener('click', () => {
+            document.querySelectorAll('.subfilter-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            renderFilteredProducts(products, sub, productsGrid);
+        });
+        subfilterContainer.appendChild(btn);
+    });
+
+    // Renderizar inicialmente con la primera subcategoría seleccionada
+    renderFilteredProducts(products, subcategories[0], productsGrid);
+}
+
+// RENDERIZAR PRODUCTOS SEGÚN EL SUBFILTRO SELECCIONADO
+function renderFilteredProducts(products, subcategory, container) {
+    container.innerHTML = '';
+    const filtered = products.filter(p => p.subcategory === subcategory);
+
+    filtered.forEach(p => {
+        const card = document.createElement('div');
+        card.className = 'product-card';
+        card.innerHTML = `
+            <div class="product-image">
+                <span class="product-badge">${p.subcategory}</span>
+                <img src="${p.image}" alt="${p.title}" onerror="this.src='${p.fallback}'">
+            </div>
+            <div class="product-info">
+                <h3 class="product-title">${p.title}</h3>
+                <div class="product-price">${formatCOP(p.price)}</div>
+                <button class="add-to-cart" onclick="addToCart(${p.id}, '${p.title}', ${p.price}, '${p.image}', '${p.fallback}')">Añadir al Carrito</button>
+            </div>
+        `;
+        container.appendChild(card);
+    });
+}
+
+// LÓGICA DEL CARRITO
+window.addToCart = function(id, title, price, image, fallback) {
+    const existing = cart.find(item => item.id === id);
+    if (existing) {
+        existing.quantity += 1;
     } else {
-        cart.push({ ...product, quantity: 1 });
+        cart.push({ id, title, price, image, fallback, quantity: 1 });
     }
+    saveAndRefreshCart();
+    document.getElementById('cartModal').classList.add('active');
+};
 
+window.removeFromCart = function(id) {
+    cart = cart.filter(item => item.id !== id);
+    saveAndRefreshCart();
+};
+
+function saveAndRefreshCart() {
+    localStorage.setItem('esencia_cart', JSON.stringify(cart));
     updateCartUI();
-    
-    // Mostrar modal del carrito automáticamente al agregar
-    cartModal.classList.add('active');
 }
 
-// Remover producto del carrito
-window.removeFromCart = function(productId) {
-    cart = cart.filter(item => item.id !== productId);
-    updateCartUI();
-}
-
-// Actualizar interfaz del carrito
 function updateCartUI() {
-    // Conteo total
-    const totalCount = cart.reduce((sum, item) => sum + item.quantity, 0);
-    cartCount.textContent = totalCount;
+    const cartCount = document.getElementById('cartCount');
+    const cartItems = document.getElementById('cartItems');
+    const cartTotalPrice = document.getElementById('cartTotalPrice');
 
-    // Renderizar items en el modal
+    const totalCount = cart.reduce((acc, item) => acc + item.quantity, 0);
+    if(cartCount) cartCount.textContent = totalCount;
+
+    if (!cartItems) return;
+
     if (cart.length === 0) {
-        cartItemsContainer.innerHTML = `<p class="empty-cart-msg">Tu carrito está vacío.</p>`;
+        cartItems.innerHTML = `<p class="empty-cart-msg">Tu carrito está vacío.</p>`;
         cartTotalPrice.textContent = formatCOP(0);
         return;
     }
 
-    cartItemsContainer.innerHTML = '';
-    let totalPrice = 0;
+    cartItems.innerHTML = '';
+    let total = 0;
 
     cart.forEach(item => {
-        totalPrice += item.price * item.quantity;
-        const cartItemEl = document.createElement('div');
-        cartItemEl.className = 'cart-item';
-        cartItemEl.innerHTML = `
+        total += item.price * item.quantity;
+        const div = document.createElement('div');
+        div.className = 'cart-item';
+        div.innerHTML = `
             <img src="${item.image}" alt="${item.title}" onerror="this.src='${item.fallback}'">
             <div class="cart-item-details">
                 <div class="cart-item-title">${item.title}</div>
@@ -197,51 +153,40 @@ function updateCartUI() {
             </div>
             <button class="cart-item-remove" onclick="removeFromCart(${item.id})">&times;</button>
         `;
-        cartItemsContainer.appendChild(cartItemEl);
+        cartItems.appendChild(div);
     });
 
-    cartTotalPrice.textContent = formatCOP(totalPrice);
+    cartTotalPrice.textContent = formatCOP(total);
 }
 
-// Abrir y cerrar modal del carrito
-cartBtn.addEventListener('click', () => cartModal.classList.add('active'));
-closeCart.addEventListener('click', () => cartModal.classList.remove('active'));
-cartModal.addEventListener('click', (e) => {
-    if (e.target === cartModal) cartModal.classList.remove('active');
-});
+function setupCartEvents() {
+    const cartBtn = document.getElementById('cartBtn');
+    const closeCart = document.getElementById('closeCart');
+    const cartModal = document.getElementById('cartModal');
+    const checkoutBtn = document.getElementById('checkoutBtn');
 
-// Menú móvil responsive
-menuToggle.addEventListener('click', () => {
-    navMenu.classList.toggle('active');
-});
-
-// Cerrar menú al hacer clic en un enlace del menú móvil
-document.querySelectorAll('.nav-link').forEach(link => {
-    link.addEventListener('click', () => {
-        navMenu.classList.remove('active');
-    });
-});
-
-// Botón de finalizar pedido (Simulación de compra vía WhatsApp / Pasarela)
-checkoutBtn.addEventListener('click', () => {
-    if (cart.length === 0) {
-        alert('Tu carrito está vacío.');
-        return;
+    if(cartBtn) cartBtn.addEventListener('click', () => cartModal.classList.add('active'));
+    if(closeCart) closeCart.addEventListener('click', () => cartModal.classList.remove('active'));
+    
+    if(checkoutBtn) {
+        checkoutBtn.addEventListener('click', () => {
+            if(cart.length === 0) return alert('El carrito está vacío');
+            let msg = "Hola ESENCIA, deseo realizar el siguiente pedido:%0A";
+            let total = 0;
+            cart.forEach(i => {
+                msg += `- ${i.title} (x${i.quantity}) : ${formatCOP(i.price * i.quantity)}%0A`;
+                total += i.price * i.quantity;
+            });
+            msg += `%0ATotal: ${formatCOP(total)}`;
+            window.open(`https://wa.me/573239119905?text=${msg}`, '_blank');
+        });
     }
-    
-    let message = "Hola ESENCIA, deseo realizar el siguiente pedido:%0A";
-    let total = 0;
-    cart.forEach(item => {
-        message += `- ${item.title} (x${item.quantity}) : ${formatCOP(item.price * item.quantity)}%0A`;
-        total += item.price * item.quantity;
-    });
-    message += `%0ATotal a pagar: ${formatCOP(total)}`;
-    
-    // Redirigir a WhatsApp (Número de contacto actualizado)
-    window.open(`https://wa.me/573239119905?text=${message}`, '_blank');
-});
+}
 
-// Inicializar la aplicación cargando todos los productos
-document.addEventListener('DOMContentLoaded', () => {
-    renderProducts('all');
-});
+function setupMobileMenu() {
+    const menuToggle = document.getElementById('menuToggle');
+    const navMenu = document.getElementById('navMenu');
+    if(menuToggle && navMenu) {
+        menuToggle.addEventListener('click', () => navMenu.classList.toggle('active'));
+    }
+}

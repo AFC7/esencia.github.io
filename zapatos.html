@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo Camisetas | ESENCIA</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Plus+Jakarta+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<!-- NOTA: Define el atributo data-category para cada página independiente -->
+<body data-category="camisetas">
+
+    <div class="top-banner">
+        <span>👑 Catálogo Exclusivo de Camisetas | ESENCIA</span>
+    </div>
+
+    <header class="header">
+        <div class="nav-container">
+            <a href="index.html" class="logo-box">
+                <svg class="crown-icon" viewBox="0 0 24 24" width="32" height="32" fill="#D4AF37">
+                    <path d="M5 16L3 5l5.5 5L12 4l3.5 6L21 5l-2 11H5m14 3a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1v-1h14v1Z"/>
+                </svg>
+                <span class="logo-text">ESENCIA</span>
+            </a>
+
+            <nav class="nav-menu" id="navMenu">
+                <a href="index.html" class="nav-link">Inicio</a>
+                <a href="camisetas.html" class="nav-link active">Camisetas</a>
+                <a href="esqueletos.html" class="nav-link">Esqueletos</a>
+                <a href="zapatos.html" class="nav-link">Zapatos</a>
+                <a href="gorras.html" class="nav-link">Gorras</a>
+                <a href="maquillaje.html" class="nav-link">Maquillaje</a>
+            </nav>
+
+            <div class="nav-actions">
+                <button class="cart-btn" id="cartBtn">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+                    <span class="cart-count" id="cartCount">0</span>
+                </button>
+                <button class="menu-toggle" id="menuToggle">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="catalog-page container">
+        <div class="page-title-box">
+            <h1>Catálogo de Camisetas</h1>
+            <p>Selecciona un subfiltro para refinado específico:</p>
+        </div>
+
+        <!-- SUBFILTROS DINÁMICOS SEGÚN LA CATEGORÍA -->
+        <div class="subfilter-container" id="subfilterContainer">
+            <!-- Inyectados por JavaScript según la página activa -->
+        </div>
+
+        <!-- CONTENEDORES DE PRODUCTO (4 EJEMPLOS POR CATÁLOGO) -->
+        <div class="products-grid" id="productsGrid">
+            <!-- Los 4 contenedores de productos se generan aquí por JS -->
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-bottom">
+            <p>&copy; 2026 ESENCIA. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- MODAL CARRITO -->
+    <div class="cart-modal" id="cartModal">
+        <div class="cart-content">
+            <div class="cart-header">
+                <h3>Tu Carrito ESENCIA</h3>
+                <button class="close-cart" id="closeCart">&times;</button>
+            </div>
+            <div class="cart-items" id="cartItems"></div>
+            <div class="cart-footer">
+                <div class="cart-total"><span>Total:</span><span id="cartTotalPrice">$0</span></div>
+                <button class="btn-primary checkout-btn" id="checkoutBtn">Finalizar Pedido</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
