@@ -15,10 +15,10 @@ const productsData = {
         { id: 204, title: "Esqueleto Ribbed Cotton", subcategory: "Clásico", price: 48000, image: "images/esqueletos-4.jpg", fallback: "https://images.unsplash.com/photo-1503341455253-b2e723bb3dbb?auto=format&fit=crop&w=600&q=80" }
     ],
     zapatos: [
-        { id: 301, title: "Zapatos Oxford Classic Leather", subcategory: "Formal", price: 180000, image: "images/zapatos-1.jpg", fallback: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=600&q=80" },
-        { id: 302, title: "Sneakers Gold Runner", subcategory: "Urbano", price: 160000, image: "images/zapatos-2.jpg", fallback: "https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?auto=format&fit=crop&w=600&q=80" },
-        { id: 303, title: "Mocasines Suede Velvet", subcategory: "Casual", price: 175000, image: "images/zapatos-3.jpg", fallback: "https://images.unsplash.com/photo-1533867617858-e7b97e060509?auto=format&fit=crop&w=600&q=80" },
-        { id: 304, title: "Botas Chelsea Dark", subcategory: "Botas", price: 210000, image: "images/zapatos-4.jpg", fallback: "https://images.unsplash.com/photo-1608256246200-53e635b5b65f?auto=format&fit=crop&w=600&q=80" }
+        { id: 301, title: "KIKE", subcategory: "Formal", price: 180000, image: "images/zapatos-1.jpg", fallback: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=600&q=80" },
+        { id: 302, title: "Abibas", subcategory: "Urbano", price: 160000, image: "images/zapatos-2.jpg", fallback: "https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?auto=format&fit=crop&w=600&q=80" },
+        { id: 303, title: "Ardidas", subcategory: "Casual", price: 175000, image: "images/zapatos-3.jpg", fallback: "https://images.unsplash.com/photo-1533867617858-e7b97e060509?auto=format&fit=crop&w=600&q=80" },
+        { id: 304, title: "Fuma", subcategory: "Botas", price: 210000, image: "images/zapatos-4.jpg", fallback: "https://images.unsplash.com/photo-1608256246200-53e635b5b65f?auto=format&fit=crop&w=600&q=80" }
     ],
     gorras: [
         { id: 401, title: "Gorra Snapback Crown Gold", subcategory: "Snapback", price: 70000, image: "images/gorras-1.jpg", fallback: "https://images.unsplash.com/photo-1588850561407-ed78c282e89b?auto=format&fit=crop&w=600&q=80" },
@@ -31,7 +31,14 @@ const productsData = {
         { id: 502, title: "Paleta Sombras Gold Edition", subcategory: "Ojos", price: 120000, image: "images/maquillaje-2.jpg", fallback: "https://images.unsplash.com/photo-1512496015851-a90fb38ba796?auto=format&fit=crop&w=600&q=80" },
         { id: 503, title: "Labial Velvet Matte Black Box", subcategory: "Labios", price: 50000, image: "images/maquillaje-3.jpg", fallback: "https://images.unsplash.com/photo-1586495777744-4413f21062fa?auto=format&fit=crop&w=600&q=80" },
         { id: 504, title: "Primer Illuminating Glow", subcategory: "Cuidado", price: 85000, image: "images/maquillaje-4.jpg", fallback: "https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=600&q=80" }
+    ],
+    medias: [
+        { id: 601, title: "Base Matte Full Longwear", subcategory: "Rostro", price: 95000, image: "images/maquillaje-1.jpg", fallback: "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=600&q=80" },
+        { id: 602, title: "Paleta Sombras Gold Edition", subcategory: "Ojos", price: 120000, image: "images/maquillaje-2.jpg", fallback: "https://images.unsplash.com/photo-1512496015851-a90fb38ba796?auto=format&fit=crop&w=600&q=80" },
+        { id: 603, title: "Labial Velvet Matte Black Box", subcategory: "Labios", price: 50000, image: "images/maquillaje-3.jpg", fallback: "https://images.unsplash.com/photo-1586495777744-4413f21062fa?auto=format&fit=crop&w=600&q=80" },
+        { id: 604, title: "Primer Illuminating Glow", subcategory: "Cuidado", price: 85000, image: "images/maquillaje-4.jpg", fallback: "https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=600&q=80" }
     ]
+
 };
 
 // CARRITO GLOBAL
