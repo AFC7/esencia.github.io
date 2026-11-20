@@ -28,7 +28,7 @@ const productsData = {
             team: "New York Yankees", 
             colors: "Beige y negro", 
             style: "Bicolor", 
-            price: 35000, 
+            price: 45000, 
             sizes: ["Ajustable"], 
             image: "images/gorras/gorra10.jpeg" 
         },
@@ -39,7 +39,7 @@ const productsData = {
             team: "Los Angeles Dodgers", 
             colors: "Azul rey y blanco", 
             style: "Clásico", 
-            price: 35000, 
+            price: 45000, 
             sizes: ["Ajustable"], 
             image: "images/gorras/gorra11.jpeg" 
         },
@@ -50,7 +50,7 @@ const productsData = {
             team: "Los Angeles Dodgers", 
             colors: "Negro", 
             style: "Monocromático", 
-            price: 35000, 
+            price: 45000, 
             sizes: ["Ajustable"], 
             image: "images/gorras/gorra12.jpeg" 
         },
@@ -61,7 +61,7 @@ const productsData = {
             team: "Los Angeles Dodgers", 
             colors: "Azul y blanco", 
             style: "New Era 59FIFTY", 
-            price: 35000, 
+            price: 45000, 
             sizes: ["Cerrada / Fitted"], 
             image: "images/gorras/gorra1.jpeg" 
         },
@@ -72,7 +72,7 @@ const productsData = {
             team: "New York Yankees", 
             colors: "Crema y verde oscuro", 
             style: "Bicolor", 
-            price: 35000, 
+            price: 45000, 
             sizes: ["Ajustable"], 
             image: "images/gorras/gorra2.jpeg" 
         },
@@ -83,7 +83,7 @@ const productsData = {
             team: "Los Angeles Angels", 
             colors: "Negro, rojo y blanco", 
             style: "Clásico", 
-            price: 35000, 
+            price: 45000, 
             sizes: ["Ajustable"], 
             image: "images/gorras/gorra3.jpeg" 
         },
@@ -94,7 +94,7 @@ const productsData = {
             team: "Supreme", 
             colors: "Negro y blanco", 
             style: "Logo bordado", 
-            price: 35000, 
+            price: 45000, 
             sizes: ["Ajustable"], 
             image: "images/gorras/gorra4.jpeg" 
         },
@@ -105,7 +105,7 @@ const productsData = {
             team: "Los Angeles Dodgers", 
             colors: "Beige y café", 
             style: "Bicolor", 
-            price: 35000, 
+            price: 45000, 
             sizes: ["Ajustable"], 
             image: "images/gorras/gorra5.jpeg" 
         },
@@ -116,7 +116,7 @@ const productsData = {
             team: "New York Yankees", 
             colors: "Azul navy y turquesa", 
             style: "Urbano / Bordado", 
-            price: 35000, 
+            price: 45000, 
             sizes: ["Ajustable"], 
             image: "images/gorras/gorra6.jpeg" 
         },
@@ -127,7 +127,7 @@ const productsData = {
             team: "Chicago White Sox", 
             colors: "Blanco y negro", 
             style: "Bicolor", 
-            price: 35000, 
+            price: 45000, 
             sizes: ["Ajustable"], 
             image: "images/gorras/gorra7.jpeg" 
         },
@@ -138,7 +138,7 @@ const productsData = {
             team: "Detroit Tigers", 
             colors: "Blanco y azul navy", 
             style: "Clásico", 
-            price: 35000, 
+            price: 45000, 
             sizes: ["Ajustable"], 
             image: "images/gorras/gorra8.jpeg" 
         },
@@ -149,7 +149,7 @@ const productsData = {
             team: "New York Yankees", 
             colors: "Blanco y negro", 
             style: "Bicolor", 
-            price: 35000, 
+            price: 45000, 
             sizes: ["Ajustable"], 
             image: "images/gorras/gorra9.jpeg" 
         }
