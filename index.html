@@ -4,22 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ESENCIA | Tienda Oficial</title>
-    <!-- Tipografía Elegante -->
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Plus+Jakarta+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body data-category="inicio">
 
     <!-- BARRA SUPERIOR -->
     <div class="top-banner">
-        <span>👑 Envío gratis en compras superiores a $150.000 | Exclusividad y Estilo</span>
+        <span>👑 Envío gratis en compras superiores a $150.000 &nbsp;|&nbsp; Exclusividad y Estilo</span>
     </div>
 
     <!-- HEADER / BARRA DE NAVEGACIÓN -->
     <header class="header">
         <div class="nav-container">
             <a href="index.html" class="logo-box">
-                <svg class="crown-icon" viewBox="0 0 24 24" width="32" height="32" fill="#D4AF37">
+                <svg class="crown-icon" viewBox="0 0 24 24" width="30" height="30" fill="#D4AF37">
                     <path d="M5 16L3 5l5.5 5L12 4l3.5 6L21 5l-2 11H5m14 3a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1v-1h14v1Z"/>
                 </svg>
                 <span class="logo-text">ESENCIA</span>
@@ -53,88 +52,144 @@
 
     <!-- SECCIÓN HERO (PORTADA) -->
     <section class="hero">
-        <div class="hero-content">
-            <span class="hero-badge">NUEVA COLECCIÓN EXCLUSIVA</span>
+        <div class="hero-glow"></div>
+        <div class="hero-content fade-in-up">
+            <span class="hero-badge">✦ NUEVA COLECCIÓN EXCLUSIVA ✦</span>
             <h1>Elegancia que Define tu Carácter</h1>
-            <p>Descubre colecciones seleccionadas con distinción. Selecciona una categoría para explorar su catálogo independiente.</p>
-            <a href="#catalogos" class="btn-primary" style="display: inline-block; width: auto; margin-top: 15px; padding: 12px 30px;">Explorar Catálogos</a>
+            <p>Descubre colecciones seleccionadas con distinción. Explora cada categoría y encuentra piezas diseñadas para destacar.</p>
+            <div class="hero-buttons">
+                <a href="#catalogos" class="btn-primary btn-hero">Explorar Catálogos</a>
+            </div>
         </div>
     </section>
 
-    <!-- HUB DE CATÁLOGOS INDEPENDIENTES -->
+    <!-- HUB DE CATÁLOGOS (SLIDER ANIMADO) -->
     <section id="catalogos" class="categories-section">
         <div class="container">
-            <h2 class="section-title">Nuestros Catálogos</h2>
-            <div class="categories-grid">
-                <a href="camisetas.html" class="category-card">
-                    <img src="images/camisetas-main.jpg" alt="Camisetas" onerror="this.src='https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=600&q=80'">
-                    <div class="category-overlay"><h3>Catálogo Camisetas</h3></div>
-                </a>
-                <a href="esqueletos.html" class="category-card">
-                    <img src="images/esqueletos-main.jpg" alt="Esqueletos" onerror="this.src='https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=600&q=80'">
-                    <div class="category-overlay"><h3>Catálogo Esqueletos</h3></div>
-                </a>
-                <a href="zapatos.html" class="category-card">
-                    <img src="images/zapatos-main.jpg" alt="Zapatos" onerror="this.src='https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=600&q=80'">
-                    <div class="category-overlay"><h3>Catálogo Zapatos</h3></div>
-                </a>
-                <a href="gorras.html" class="category-card">
-                    <img src="images/gorras-main.jpg" alt="Gorras" onerror="this.src='https://images.unsplash.com/photo-1588850561407-ed78c282e89b?auto=format&fit=crop&w=600&q=80'">
-                    <div class="category-overlay"><h3>Catálogo Gorras</h3></div>
-                </a>
-                <a href="medias.html" class="category-card">
-                    <img src="images/medias-1.jpg" alt="Gorras" onerror="this.src='https://images.unsplash.com/photo-1588850561407-ed78c282e89b?auto=format&fit=crop&w=600&q=80'">
-                    <div class="category-overlay"><h3>Catálogo Gorras</h3></div>
-                </a>
-                <a href="maquillaje.html" class="category-card">
-                    <img src="images/maquillaje-main.jpg" alt="Maquillaje" onerror="this.src='https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=600&q=80'">
-                    <div class="category-overlay"><h3>Catálogo Maquillaje</h3></div>
-                </a>
+            <div class="section-header">
+                <div>
+                    <span class="section-subtitle">COLECCIONES</span>
+                    <h2 class="section-title">Nuestros Catálogos</h2>
+                </div>
+                <div class="slider-controls">
+                    <button class="slider-btn" id="prevSlide" aria-label="Anterior">&#10094;</button>
+                    <button class="slider-btn" id="nextSlide" aria-label="Siguiente">&#10095;</button>
+                </div>
             </div>
+
+            <div class="slider-wrapper">
+                <div class="categories-slider" id="categoriesSlider">
+                    <a href="camisetas.html" class="category-card">
+                        <img src="images/camisetas-main.jpg" alt="Camisetas" onerror="this.src='https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=600&q=80'">
+                        <div class="category-overlay">
+                            <span class="cat-tag">01</span>
+                            <h3>Camisetas</h3>
+                            <span class="cat-explore">Explorar colección &rarr;</span>
+                        </div>
+                    </a>
+
+                    <a href="esqueletos.html" class="category-card">
+                        <img src="images/esqueletos-main.jpg" alt="Esqueletos" onerror="this.src='https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=600&q=80'">
+                        <div class="category-overlay">
+                            <span class="cat-tag">02</span>
+                            <h3>Esqueletos</h3>
+                            <span class="cat-explore">Explorar colección &rarr;</span>
+                        </div>
+                    </a>
+
+                    <a href="zapatos.html" class="category-card">
+                        <img src="images/zapatos-main.jpg" alt="Zapatos" onerror="this.src='https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=600&q=80'">
+                        <div class="category-overlay">
+                            <span class="cat-tag">03</span>
+                            <h3>Zapatos</h3>
+                            <span class="cat-explore">Explorar colección &rarr;</span>
+                        </div>
+                    </a>
+
+                    <a href="gorras.html" class="category-card">
+                        <img src="images/gorras-main.jpg" alt="Gorras" onerror="this.src='https://images.unsplash.com/photo-1588850561407-ed78c282e89b?auto=format&fit=crop&w=600&q=80'">
+                        <div class="category-overlay">
+                            <span class="cat-tag">04</span>
+                            <h3>Gorras</h3>
+                            <span class="cat-explore">Explorar colección &rarr;</span>
+                        </div>
+                    </a>
+
+                    <a href="medias.html" class="category-card">
+                        <img src="images/medias-1.jpg" alt="Medias" onerror="this.src='https://images.unsplash.com/photo-1586350977771-b3b0abd50c82?auto=format&fit=crop&w=600&q=80'">
+                        <div class="category-overlay">
+                            <span class="cat-tag">05</span>
+                            <h3>Medias</h3>
+                            <span class="cat-explore">Explorar colección &rarr;</span>
+                        </div>
+                    </a>
+
+                    <a href="maquillaje.html" class="category-card">
+                        <img src="images/maquillaje-main.jpg" alt="Maquillaje" onerror="this.src='https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=600&q=80'">
+                        <div class="category-overlay">
+                            <span class="cat-tag">06</span>
+                            <h3>Maquillaje</h3>
+                            <span class="cat-explore">Explorar colección &rarr;</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <p class="mobile-swipe-hint">Desliza para ver más categorías &rarr;</p>
         </div>
     </section>
 
     <!-- SECCIÓN NOSOTROS -->
-    <section class="about-section" style="padding: 60px 0; background-color: #0e0e0e; border-top: 1px solid var(--bg-dark); border-bottom: 1px solid var(--bg-dark);">
-        <div class="container" style="display: flex; flex-wrap: wrap; gap: 40px; align-items: center;">
-            <div style="flex: 1; min-width: 300px;">
-                <span style="color: var(--gold); font-size: 0.85rem; letter-spacing: 2px;">FILOSOFÍA ESENCIA</span>
-                <h2 style="font-size: 2rem; margin: 10px 0 20px;">Diseñado para Quienes Marcan la Diferencia</h2>
-                <p style="color: var(--gray-light); margin-bottom: 20px;">ESENCIA nace de la visión de fusionar la alta costura urbana con la comodidad esencial. Cada prenda y producto es seleccionado rigurosamente para garantizar estándares superiores de calidad, durabilidad y presencia impecable.</p>
+    <section class="about-section">
+        <div class="container about-grid">
+            <div class="about-text">
+                <span class="section-subtitle">FILOSOFÍA ESENCIA</span>
+                <h2>Diseñado para Quienes Marcan la Diferencia</h2>
+                <p>ESENCIA nace de la visión de fusionar la alta costura urbana con la comodidad esencial. Cada prenda y producto es seleccionado rigurosamente para garantizar estándares superiores de calidad, durabilidad y presencia impecable.</p>
+                <div class="about-features">
+                    <div class="feature-item">
+                        <span class="feature-icon">✦</span>
+                        <span>Calidad Premium</span>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-icon">✦</span>
+                        <span>Envíos Nacionales</span>
+                    </div>
+                </div>
             </div>
-            <div style="flex: 1; min-width: 300px; height: 300px; border-radius: 8px; overflow: hidden;">
-                <img src="images/about.jpg" alt="Filosofía Esencia" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.src='https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=800&q=80'">
+            <div class="about-image-box">
+                <img src="images/about.jpg" alt="Filosofía Esencia" onerror="this.src='https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=800&q=80'">
             </div>
         </div>
     </section>
 
     <!-- FOOTER / CONTACTO -->
     <footer class="footer">
-        <div class="container" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 30px; text-align: left; padding-bottom: 30px;">
-            <div>
-                <div class="logo-box" style="margin-bottom: 15px;">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <div class="logo-box">
                     <svg class="crown-icon" viewBox="0 0 24 24" width="24" height="24" fill="#D4AF37">
                         <path d="M5 16L3 5l5.5 5L12 4l3.5 6L21 5l-2 11H5m14 3a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1v-1h14v1Z"/>
                     </svg>
-                    <span class="logo-text" style="font-size: 1.2rem;">ESENCIA</span>
+                    <span class="logo-text">ESENCIA</span>
                 </div>
-                <p style="color: var(--gray-light); font-size: 0.9rem;">Elevando el estándar del estilo personal y la elegancia contemporánea.</p>
+                <p>Elevando el estándar del estilo personal y la elegancia contemporánea.</p>
             </div>
             <div>
-                <h4 style="color: var(--gold); margin-bottom: 15px;">Enlaces Rápidos</h4>
-                <ul style="list-style: none; display: flex; flex-direction: column; gap: 8px;">
-                    <li><a href="camisetas.html" style="color: var(--gray-light); font-size: 0.9rem;">Camisetas</a></li>
-                    <li><a href="esqueletos.html" style="color: var(--gray-light); font-size: 0.9rem;">Esqueletos</a></li>
-                    <li><a href="zapatos.html" style="color: var(--gray-light); font-size: 0.9rem;">Zapatos</a></li>
-                    <li><a href="gorras.html" style="color: var(--gray-light); font-size: 0.9rem;">Gorras</a></li>
-                    <li><a href="maquillaje.html" style="color: var(--gray-light); font-size: 0.9rem;">Maquillaje</a></li>
+                <h4>Enlaces Rápidos</h4>
+                <ul class="footer-links">
+                    <li><a href="camisetas.html">Camisetas</a></li>
+                    <li><a href="esqueletos.html">Esqueletos</a></li>
+                    <li><a href="zapatos.html">Zapatos</a></li>
+                    <li><a href="gorras.html">Gorras</a></li>
+                    <li><a href="medias.html">Medias</a></li>
+                    <li><a href="maquillaje.html">Maquillaje</a></li>
                 </ul>
             </div>
             <div>
-                <h4 style="color: var(--gold); margin-bottom: 15px;">Contacto</h4>
-                <p style="color: var(--gray-light); font-size: 0.9rem; margin-bottom: 6px;">📍 Fusagasugá, Cundinamarca</p>
-                <p style="color: var(--gray-light); font-size: 0.9rem; margin-bottom: 6px;">📧 contacto@esenciastore.com</p>
-                <p style="color: var(--gray-light); font-size: 0.9rem;">📞 +57 323 911 9905</p>
+                <h4>Contacto</h4>
+                <p class="footer-contact">📍 Fusagasugá, Cundinamarca</p>
+                <p class="footer-contact">📧 contacto@esenciastore.com</p>
+                <p class="footer-contact">📞 +57 323 911 9905</p>
             </div>
         </div>
         <div class="container footer-bottom">
@@ -160,7 +215,6 @@
         </div>
     </div>
 
-    <!-- ARCHIVO JAVASCRIPT REUTILIZABLE -->
     <script src="script.js"></script>
 </body>
 </html>

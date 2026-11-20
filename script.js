@@ -55,6 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
     updateCartUI();
     setupCartEvents();
     setupMobileMenu();
+    setupCatalogSlider();
 
     const category = document.body.getAttribute('data-category');
     if (category && productsData[category]) {
@@ -225,4 +226,45 @@ function setupMobileMenu() {
     if(menuToggle && navMenu) {
         menuToggle.addEventListener('click', () => navMenu.classList.toggle('active'));
     }
+}
+
+function setupCatalogSlider() {
+    const slider = document.getElementById('categoriesSlider');
+    const prevBtn = document.getElementById('prevSlide');
+    const nextBtn = document.getElementById('nextSlide');
+
+    if (!slider) return;
+
+    const scrollAmount = 290;
+
+    if (nextBtn) {
+        nextBtn.addEventListener('click', () => {
+            if (slider.scrollLeft + slider.clientWidth >= slider.scrollWidth - 10) {
+                slider.scrollTo({ left: 0, behavior: 'smooth' });
+            } else {
+                slider.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+            }
+        });
+    }
+
+    if (prevBtn) {
+        prevBtn.addEventListener('click', () => {
+            if (slider.scrollLeft <= 10) {
+                slider.scrollTo({ left: slider.scrollWidth, behavior: 'smooth' });
+            } else {
+                slider.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+            }
+        });
+    }
+
+    let autoSlide = setInterval(() => {
+        if (slider.scrollLeft + slider.clientWidth >= slider.scrollWidth - 10) {
+            slider.scrollTo({ left: 0, behavior: 'smooth' });
+        } else {
+            slider.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+        }
+    }, 4000);
+
+    slider.addEventListener('mouseenter', () => clearInterval(autoSlide));
+    slider.addEventListener('touchstart', () => clearInterval(autoSlide), { passive: true });
 }
