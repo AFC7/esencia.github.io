@@ -21,10 +21,138 @@ const productsData = {
         { id: 304, title: "Fuma", subcategory: "Botas", price: 210000, sizes: [40, 41, 42], image: "images/zapatos-4.jpg", fallback: "https://images.unsplash.com/photo-1608256246200-53e635b5b65f?auto=format&fit=crop&w=600&q=80" }
     ],
     gorras: [
-        { id: 401, title: "Gorra Snapback Crown Gold", subcategory: "Snapback", price: 70000, image: "images/gorras-1.jpg", fallback: "https://images.unsplash.com/photo-1588850561407-ed78c282e89b?auto=format&fit=crop&w=600&q=80" },
-        { id: 402, title: "Gorra Trucker Mesh Black", subcategory: "Trucker", price: 65000, image: "images/gorras-2.jpg", fallback: "https://images.unsplash.com/photo-1575428652377-a2d80e2277fc?auto=format&fit=crop&w=600&q=80" },
-        { id: 403, title: "Gorra Curved Strapback", subcategory: "Curva", price: 68000, image: "images/gorras-3.jpg", fallback: "https://images.unsplash.com/photo-1521369909029-2afed882baee?auto=format&fit=crop&w=600&q=80" },
-        { id: 404, title: "Gorra Beanie Winter Gold", subcategory: "Beanie", price: 55000, image: "images/gorras-4.jpg", fallback: "https://images.unsplash.com/photo-1576871337632-b9aef4c17ab9?auto=format&fit=crop&w=600&q=80" }
+        { 
+            id: 401, 
+            title: "NY Beige / Negra", 
+            subcategory: "Deportiva MLB", 
+            team: "New York Yankees", 
+            colors: "Beige y negro", 
+            style: "Bicolor", 
+            price: 35000, 
+            sizes: ["Ajustable"], 
+            image: "images/gorras/gorra10.jpeg" 
+        },
+        { 
+            id: 402, 
+            title: "LA Royal Blue", 
+            subcategory: "Deportiva MLB", 
+            team: "Los Angeles Dodgers", 
+            colors: "Azul rey y blanco", 
+            style: "Clásico", 
+            price: 35000, 
+            sizes: ["Ajustable"], 
+            image: "images/gorras/gorra11.jpeg" 
+        },
+        { 
+            id: 403, 
+            title: "LA Black Edition", 
+            subcategory: "Deportiva MLB", 
+            team: "Los Angeles Dodgers", 
+            colors: "Negro", 
+            style: "Monocromático", 
+            price: 35000, 
+            sizes: ["Ajustable"], 
+            image: "images/gorras/gorra12.jpeg" 
+        },
+        { 
+            id: 404, 
+            title: "LA New Era Blue", 
+            subcategory: "Deportiva MLB", 
+            team: "Los Angeles Dodgers", 
+            colors: "Azul y blanco", 
+            style: "New Era 59FIFTY", 
+            price: 35000, 
+            sizes: ["Cerrada / Fitted"], 
+            image: "images/gorras/gorra1.jpeg" 
+        },
+        { 
+            id: 405, 
+            title: "NY Cream / Green", 
+            subcategory: "Deportiva MLB", 
+            team: "New York Yankees", 
+            colors: "Crema y verde oscuro", 
+            style: "Bicolor", 
+            price: 35000, 
+            sizes: ["Ajustable"], 
+            image: "images/gorras/gorra2.jpeg" 
+        },
+        { 
+            id: 406, 
+            title: "LA Angels Black", 
+            subcategory: "Deportiva MLB", 
+            team: "Los Angeles Angels", 
+            colors: "Negro, rojo y blanco", 
+            style: "Clásico", 
+            price: 35000, 
+            sizes: ["Ajustable"], 
+            image: "images/gorras/gorra3.jpeg" 
+        },
+        { 
+            id: 407, 
+            title: "Supreme Black", 
+            subcategory: "Urbana / Streetwear", 
+            team: "Supreme", 
+            colors: "Negro y blanco", 
+            style: "Logo bordado", 
+            price: 35000, 
+            sizes: ["Ajustable"], 
+            image: "images/gorras/gorra4.jpeg" 
+        },
+        { 
+            id: 408, 
+            title: "LA Earth Tones", 
+            subcategory: "Deportiva MLB", 
+            team: "Los Angeles Dodgers", 
+            colors: "Beige y café", 
+            style: "Bicolor", 
+            price: 35000, 
+            sizes: ["Ajustable"], 
+            image: "images/gorras/gorra5.jpeg" 
+        },
+        { 
+            id: 409, 
+            title: "NY Navy Edition", 
+            subcategory: "Deportiva MLB", 
+            team: "New York Yankees", 
+            colors: "Azul navy y turquesa", 
+            style: "Urbano / Bordado", 
+            price: 35000, 
+            sizes: ["Ajustable"], 
+            image: "images/gorras/gorra6.jpeg" 
+        },
+        { 
+            id: 410, 
+            title: "Chicago White Sox", 
+            subcategory: "Deportiva MLB", 
+            team: "Chicago White Sox", 
+            colors: "Blanco y negro", 
+            style: "Bicolor", 
+            price: 35000, 
+            sizes: ["Ajustable"], 
+            image: "images/gorras/gorra7.jpeg" 
+        },
+        { 
+            id: 411, 
+            title: "Detroit Tigers", 
+            subcategory: "Deportiva MLB", 
+            team: "Detroit Tigers", 
+            colors: "Blanco y azul navy", 
+            style: "Clásico", 
+            price: 35000, 
+            sizes: ["Ajustable"], 
+            image: "images/gorras/gorra8.jpeg" 
+        },
+        { 
+            id: 412, 
+            title: "NY White / Black", 
+            subcategory: "Deportiva MLB", 
+            team: "New York Yankees", 
+            colors: "Blanco y negro", 
+            style: "Bicolor", 
+            price: 35000, 
+            sizes: ["Ajustable"], 
+            image: "images/gorras/gorra9.jpeg" 
+        }
     ],
     maquillaje: [
         { id: 501, title: "Base Matte Full Longwear", subcategory: "Rostro", price: 95000, image: "images/maquillaje-1.jpg", fallback: "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=600&q=80" },
@@ -95,11 +223,26 @@ function renderFilteredProducts(products, subcategory, container) {
         : products.filter(p => p.subcategory === subcategory);
 
     filtered.forEach(p => {
-        // Genera el selector de tallas solo si el producto tiene la propiedad 'sizes'
+        const fallbackImg = p.fallback || '';
+        const onErrorAttr = fallbackImg ? `onerror="this.src='${fallbackImg}'"` : '';
+
+        // Genera detalles extra si existen (Equipo, Colores, Estilo)
+        const detailsList = [];
+        if (p.team) detailsList.push(`<strong>Equipo:</strong> ${p.team}`);
+        if (p.colors) detailsList.push(`<strong>Colores:</strong> ${p.colors}`);
+        if (p.style) detailsList.push(`<strong>Estilo:</strong> ${p.style}`);
+
+        const detailsHTML = detailsList.length > 0
+            ? `<div class="product-specs" style="font-size: 0.82rem; color: var(--gray-light); margin-bottom: 12px; line-height: 1.4;">
+                ${detailsList.join('<br>')}
+               </div>`
+            : '';
+
+        // Genera el selector de tallas/ajuste solo si el producto tiene la propiedad 'sizes'
         const sizeSelectorHTML = (p.sizes && p.sizes.length > 0)
             ? `<div class="product-size-wrapper" style="margin-bottom: 10px;">
                 <select id="size-${p.id}" class="product-size-select" style="width: 100%; padding: 6px; border-radius: 4px; border: 1px solid #ccc; background: #fff; color: #111;">
-                    ${p.sizes.map(s => `<option value="${s}">Talla: ${s}</option>`).join('')}
+                    ${p.sizes.map(s => `<option value="${s}">${p.sizes.length === 1 ? 'Ajuste' : 'Talla'}: ${s}</option>`).join('')}
                 </select>
                </div>`
             : '';
@@ -109,13 +252,14 @@ function renderFilteredProducts(products, subcategory, container) {
         card.innerHTML = `
             <div class="product-image">
                 <span class="product-badge">${p.subcategory}</span>
-                <img src="${p.image}" alt="${p.title}" onerror="this.src='${p.fallback}'">
+                <img src="${p.image}" alt="${p.title}" ${onErrorAttr}>
             </div>
             <div class="product-info">
                 <h3 class="product-title">${p.title}</h3>
+                ${detailsHTML}
                 <div class="product-price">${formatCOP(p.price)}</div>
                 ${sizeSelectorHTML}
-                <button class="add-to-cart" onclick="handleAddToCart(${p.id}, '${p.title}', ${p.price}, '${p.image}', '${p.fallback}')">Añadir al Carrito</button>
+                <button class="add-to-cart" onclick="handleAddToCart(${p.id}, '${p.title}', ${p.price}, '${p.image}', '${fallbackImg}')">Añadir al Carrito</button>
             </div>
         `;
         container.appendChild(card);
@@ -129,7 +273,7 @@ window.handleAddToCart = function(id, title, price, image, fallback) {
     addToCart(id, title, price, image, fallback, selectedSize);
 };
 
-window.addToCart = function(id, title, price, image, fallback, size = null) {
+window.addToCart = function(id, title, price, image, fallback = '', size = null) {
     // Se busca coincidencia por ID y también por Talla
     const existing = cart.find(item => item.id === id && item.size === size);
     if (existing) {
@@ -177,11 +321,12 @@ function updateCartUI() {
     cart.forEach(item => {
         total += item.price * item.quantity;
         const sizeLabel = item.size ? `<div style="font-size: 0.85em; opacity: 0.8;">Talla: ${item.size}</div>` : '';
+        const onErrorAttr = item.fallback ? `onerror="this.src='${item.fallback}'"` : '';
         
         const div = document.createElement('div');
         div.className = 'cart-item';
         div.innerHTML = `
-            <img src="${item.image}" alt="${item.title}" onerror="this.src='${item.fallback}'">
+            <img src="${item.image}" alt="${item.title}" ${onErrorAttr}>
             <div class="cart-item-details">
                 <div class="cart-item-title">${item.title}</div>
                 ${sizeLabel}
